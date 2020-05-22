@@ -120,12 +120,12 @@ body {
 .btn:hover,
 .btn:active,
 .btn:focus {
-	opacity: 0.4;
+	opacity: 0.7;
 	cursor: pointer;
 }
 
 .delete {
-	font-size: 6rem;
+	font-size: 5em;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: bold;
 	position: absolute;
@@ -187,7 +187,7 @@ body {
 	}
 }
 
-@media (min-width: 768px) {
+@media (min-width: 660px) {
 	.row {
 		flex-direction: row;
 		justify-content: center;
