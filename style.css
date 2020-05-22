@@ -1,0 +1,86 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1.5em auto;
+}
+
+.form>label {
+  font-size: 1.5em;
+}
+
+.form>input {
+  font-size: 1.5em;
+  text-align: center;
+  width: 60%;
+  margin: 0.5em;
+}
+
+.btn {
+  border: none;
+  font-size: 1.5em;
+  letter-spacing: 1.5px;
+  color: white;
+  background: rgb(36, 36, 119);
+  width: 60%;
+}
+
+.display {
+  display: flex;
+  flex-wrap: wrap;
+  border: red solid 3px;
+}
+
+.meme {
+  position: relative;
+  width: 500px;
+  margin: 1em auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: blue solid 3px;
+  text-align: center;
+}
+
+.top,
+.bottom {
+  position: absolute;
+  letter-spacing: 1px;
+  margin: 15px 0;
+  padding: 0 5px;
+  font-family: impact, sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: white;
+  text-shadow:
+    2px 2px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    0 2px 0 #000,
+    2px 0 0 #000,
+    0 -2px 0 #000,
+    -2px 0 0 #000,
+    2px 2px 5px #000;
+}
+
+.img {
+  width: 100%;
+}
+
+
+.top {
+  top: 0;
+}
+
+.bottom {
+  bottom: 0;
+}
