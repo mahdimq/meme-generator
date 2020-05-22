@@ -1,38 +1,38 @@
-const form = document.querySelector(".form")
-const displayMeme = document.querySelector(".display")
+const form = document.querySelector('.form')
+const displayMeme = document.querySelector('.display')
 
-form.addEventListener("submit", (e) => {
+form.addEventListener('submit', (e) => {
   e.preventDefault()
   createMemeDiv()
   form.reset()
 })
 
-// Remove meme when clicked on
-displayMeme.addEventListener('click', () => {
-  displayMeme.remove()
+displayMeme.addEventListener("click", (e) => {
+  if (e.target.tagName === "H2" || e.target.tagName === 'IMG') {
+    e.target.parentElement.remove()
+  }
 })
 
-// combine meme logic to create a meme div
 const createMemeDiv = () => {
-  const meme = document.createElement("div")
+  const meme = document.createElement('div')
   displayMeme.appendChild(meme)
-  meme.className = "meme"
+  meme.className = 'meme'
 
   // Add image src and set it as background
-  const urlInput = document.querySelector("input[name=meme-url]").value
-  const memeImg = document.createElement("img")
-  memeImg.className = "img"
-  memeImg.setAttribute("src", urlInput)
+  const urlInput = document.querySelector('input[name=meme-url]').value
+  const memeImg = document.createElement('img')
+  memeImg.className = 'img'
+  memeImg.setAttribute('src', urlInput)
 
   // Add top text and add classname
-  const topInput = document.querySelector("input[name=top-text]").value
-  const topText = document.createElement("h2")
+  const topInput = document.querySelector('input[name=top-text]').value
+  const topText = document.createElement('h2')
   topText.className = 'top'
   topText.innerText = topInput
 
   // Add bottom text and add classname
-  const bottomText = document.createElement("h2")
-  const bottomInput = document.querySelector("input[name=bottom-text]").value
+  const bottomText = document.createElement('h2')
+  const bottomInput = document.querySelector('input[name=bottom-text]').value
   bottomText.className = 'bottom'
   bottomText.innerText = bottomInput
 
@@ -40,4 +40,5 @@ const createMemeDiv = () => {
   meme.appendChild(memeImg)
   meme.appendChild(topText)
   meme.appendChild(bottomText)
+
 }
